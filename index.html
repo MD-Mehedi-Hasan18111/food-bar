@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Search</title>
+    <script src="https://kit.fontawesome.com/2f1c16eff8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Food Bar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-2">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal2" class="btn btn-primary"><i
+                            class="fas fa-shopping-cart"></i>&nbsp;<span id="count">0</span></button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Input Bar -->
+    <section class="container">
+        <div class="input-group w-75 my-4 mx-auto">
+            <input id="input" type="text" class="form-control border-3 border-primary" placeholder="Enter food name..."
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button id="search-btn" class="btn btn-primary" type="button" id="button-addon2"><i
+                    class="fas fa-search fs-3 py-1 px-2"></i></button>
+        </div>
+    </section>
+
+    <!-- Spinner -->
+    <div class="container text-center py-3 d-none" id="spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+
+    <!-- error Message -->
+    <section class="container" id="error">
+
+    </section>
+
+    <!-- food Items -->
+    <section class="container my-3">
+        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 g-4" id="items">
+
+        </div>
+    </section>
+
+    <!-- Single food details show modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="header1">
+
+                </div>
+                <div class="modal-body" id="body1">
+
+                </div>
+                <div class="modal-footer" id="footer1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Products Showing Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Order Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="carts">
+
+                </div>
+                <div class="modal-footer" id="footerr">
+                    <button onclick="clearCarts()" type="button" class="btn btn-success" data-bs-dismiss="modal">Confirm
+                        to order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
